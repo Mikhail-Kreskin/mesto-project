@@ -1,0 +1,17 @@
+.profile__wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 320px) {
+  .profile__wrap {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 679px) {
+  .profile__wrap {
+    justify-content: center;
+    width: 100%;
+  }
+}

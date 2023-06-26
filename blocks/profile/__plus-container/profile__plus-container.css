@@ -1,0 +1,42 @@
+.profile__plus-container {
+  width: 150px;
+  height: 50px;
+  border-radius: 2px;
+  border: 2px solid #fff;
+  justify-self: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile__plus-container:hover {
+  opacity: 0.6;
+}
+
+@media (min-width: 321px) and (max-width: 720px) {
+  .profile__plus-container {
+    margin-top: 18px;
+  }
+}
+
+@media (min-width: 526px) and (max-width: 720px) {
+  .profile__plus-container {
+    width: 486px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 525px) {
+  .profile__plus-container {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 320px) {
+  .profile__plus-container {
+    margin-top: 36px;
+    width: 282px;
+    height: 50px;
+  }
+}
