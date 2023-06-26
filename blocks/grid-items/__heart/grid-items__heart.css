@@ -2,4 +2,15 @@
   width: 22px;
   height: 19px;
   margin: 5px 5px 0 0;
+  cursor: pointer;
+  background-image: url(../../../images/Heart.svg);
+}
+
+.grid-items__heart:hover {
+  opacity: 0.5;
+}
+
+.grid-items__heart:active {
+  background-image: url(../../../images/Black-Heart.png);
+  opacity: 1;
 }
