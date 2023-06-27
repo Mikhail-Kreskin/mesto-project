@@ -15,7 +15,7 @@
       <header class="page__header header">
         <img
           class="header__logo"
-          src="images/Logo-Mesto- Russia.png"
+          src="images/Logo-Mesto-Russia.png"
           alt="Логотип Место"
         />
         <div class="header__line"></div>
@@ -32,7 +32,7 @@
               <p class="profile__name">Жак-Ив Кусто</p>
               <img
                 class="profile__edit-button"
-                src="images/Edit Button.svg"
+                src="images/Edit-Button.svg"
                 alt="Кнопка редактирования"
               />
               <p class="profile__description">Исследователь океана</p>
@@ -78,11 +78,7 @@
             </div>
           </div>
           <div class="grid-items__item">
-            <img
-              class="grid-items__img"
-              src="images/Dombay.jpg"
-              alt="Домбай"
-            />
+            <img class="grid-items__img" src="images/Dombay.jpg" alt="Домбай" />
             <div class="grid-items__subtitle">
               <p class="grid-items__place-name">Домбай</p>
               <img
@@ -108,11 +104,7 @@
             </div>
           </div>
           <div class="grid-items__item">
-            <img
-              class="grid-items__img"
-              src="images/Dombay.jpg"
-              alt="Домбай"
-            />
+            <img class="grid-items__img" src="images/Dombay.jpg" alt="Домбай" />
             <div class="grid-items__subtitle">
               <p class="grid-items__place-name">Домбай</p>
               <img
@@ -138,6 +130,39 @@
       <footer class="footer">
         <p class="footer__text">&copy; 2020 Mesto Russia</p>
       </footer>
+      <div class="popup">
+        <div class="popup__container">
+          <p class="popup__heading">Редактировать профиль</p>
+          <form>
+            <fieldset class="popup__fieldset">
+              <input
+                class="popup__name"
+                type="text"
+                name="name"
+                id="name"
+                value="Жак-Ив Кусто"
+              />
+            </fieldset>
+            <div class="popup__line"></div>
+            <fieldset class="popup__fieldset">
+              <input
+                class="popup__position"
+                type="text"
+                name="position"
+                id="position"
+                value="Исследователь океана"
+              />
+            </fieldset>
+            <div class="popup__line"></div>
+            <input class="popup__button" type="button" value="Сохранить" />
+          </form>
+          <img
+            class="popup__close-button"
+            src="images/Close-Icon.png"
+            alt="Кнопка закрыть"
+          />
+        </div>
+      </div>
     </div>
   </body>
 </html>

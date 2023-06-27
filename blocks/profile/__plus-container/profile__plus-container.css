@@ -8,6 +8,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .profile__plus-container:hover {

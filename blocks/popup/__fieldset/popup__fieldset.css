@@ -1,0 +1,19 @@
+.popup__fieldset {
+  max-width: 358px;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+}
+
+@media (min-width: 320px) and (max-width: 379px) {
+  .popup__fieldset {
+    max-width: 238px;
+  }
+}
+
+@media (min-width: 380px) and (max-width: 500px) {
+  .popup__fieldset {
+    width: 260px;
+    font-size: 20px;
+  }
+}

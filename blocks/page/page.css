@@ -3,6 +3,7 @@
   padding-top: 45px;
   padding-bottom: 60px;
   background-color: #000;
+  position: relative;
 }
 
 @media (max-width: 320px) {

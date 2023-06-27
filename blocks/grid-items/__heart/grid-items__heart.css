@@ -4,7 +4,6 @@
   margin: 5px 5px 0 0;
   cursor: pointer;
   background-image: url(../../../images/Heart.svg);
-  -webkit-tap-highlight-color: transparent;
 }
 
 .grid-items__heart:hover {
@@ -14,5 +13,4 @@
 .grid-items__heart:active {
   background-image: url(../../../images/Black-Heart.png);
   opacity: 1;
-  -webkit-tap-highlight-color: transparent;
 }
