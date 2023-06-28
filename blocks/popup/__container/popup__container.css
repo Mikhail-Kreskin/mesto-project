@@ -1,29 +1,25 @@
 .popup__container {
   max-width: 430px;
+  height: 330px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
-  margin: 195px auto 0 auto;
   padding-top: 34px;
-  padding-bottom: 37px;
   box-sizing: border-box;
   position: relative;
 }
 
 @media (max-width: 320px) {
   .popup__container {
-    margin-top: 123px;
-    max-width: 282px;
-    box-sizing: border-box;
+    width: 282px;
+    height: 322px;
     padding-top: 25px;
   }
 }
 
 @media (min-width: 321px) and (max-width: 650px) {
   .popup__container {
-    margin-top: 14vh;
     width: 90vw;
     max-width: 399px;
-    box-sizing: border-box;
   }
 }

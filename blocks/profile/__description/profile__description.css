@@ -7,23 +7,18 @@
   margin-bottom: 0;
   grid-column-start: 1;
   grid-column-end: 3;
-}
-
-@media (max-width: 320px) {
-  .profile__description {
-    font-size: 14px;
-    width: 282px;
-  }
+  max-width: 336px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (min-width: 320px) and (max-width: 525px) {
   .profile__description {
+    font-size: 14px;
+    max-width: 282px;
+    width: 100%;
+    margin-top: 14px;
     text-align: center;
-  }
-}
-
-@media (min-width: 321px) and (max-width: 525px) {
-  .profile__description {
-    font-size: 16px;
   }
 }

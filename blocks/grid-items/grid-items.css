@@ -14,16 +14,14 @@
   }
 }
 
-@media (min-width: 651px) and (max-width: 919px) {
+@media (min-width: 397px) and (max-width: 500px) {
   .page__grid-items {
-    max-width: 919px;
-    grid-template-columns: repeat(2, minmax(300px, 360px));
+    grid-template-columns: 350px;
   }
 }
 
-@media (min-width: 321px) and (max-width: 650px) {
+@media (min-width: 501px) and (max-width: 650px) {
   .page__grid-items {
-    max-width: 919px;
-    grid-template-columns: minmax(282px, 400px);
+    grid-template-columns: 410px;
   }
 }

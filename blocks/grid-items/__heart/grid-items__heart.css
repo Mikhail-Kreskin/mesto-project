@@ -4,6 +4,11 @@
   margin: 5px 5px 0 0;
   cursor: pointer;
   background-image: url(../../../images/Heart.svg);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: cover;
+  background-color: transparent;
+  border: none;
 }
 
 .grid-items__heart:hover {
@@ -11,6 +16,6 @@
 }
 
 .grid-items__heart:active {
-  background-image: url(../../../images/Black-Heart.png);
+  background-image: url(../../../images/Black-Heart.svg);
   opacity: 1;
 }

@@ -10,158 +10,173 @@
     <link rel="stylesheet" href="pages/index.css" />
     <link rel="shortcut icon" href="images/Yandex-favicon.jpg" />
   </head>
-  <body>
-    <div class="page">
-      <header class="page__header header">
-        <img
-          class="header__logo"
-          src="images/Logo-Mesto-Russia.png"
-          alt="Логотип Место"
-        />
-        <div class="header__line"></div>
-      </header>
-      <main>
-        <section class="page__profile profile">
-          <div class="profile__wrap">
-            <img
-              class="profile__picture"
-              src="images/Picture-Jak.jpg"
-              alt="Фото Жак-Ив Кусто"
-            />
-            <div class="profile__info">
-              <p class="profile__name">Жак-Ив Кусто</p>
-              <img
-                class="profile__edit-button"
-                src="images/Edit-Button.svg"
-                alt="Кнопка редактирования"
-              />
-              <p class="profile__description">Исследователь океана</p>
-            </div>
-          </div>
-          <div class="profile__plus-container">
-            <img
-              class="profile__plus"
-              src="images/Plus.png"
-              alt="Кнопка добавить картинку"
-            />
-          </div>
-        </section>
-        <section class="page__grid-items grid-items">
-          <div class="grid-items__item">
-            <img
-              class="grid-items__img"
-              src="images/Karachaevsk.jpg"
-              alt="Карачаевск"
-            />
-            <div class="grid-items__subtitle">
-              <p class="grid-items__place-name">Карачаевск</p>
-              <img
-                class="grid-items__heart"
-                src="images/Heart.svg"
-                alt="Лайк"
-              />
-            </div>
-          </div>
-          <div class="grid-items__item">
-            <img
-              class="grid-items__img"
-              src="images/Elbrus.jpg"
-              alt="Гора Эльбрус"
-            />
-            <div class="grid-items__subtitle">
-              <p class="grid-items__place-name">Гора Эльбрус</p>
-              <img
-                class="grid-items__heart"
-                src="images/Heart.svg"
-                alt="Лайк"
-              />
-            </div>
-          </div>
-          <div class="grid-items__item">
-            <img class="grid-items__img" src="images/Dombay.jpg" alt="Домбай" />
-            <div class="grid-items__subtitle">
-              <p class="grid-items__place-name">Домбай</p>
-              <img
-                class="grid-items__heart"
-                src="images/Heart.svg"
-                alt="Лайк"
-              />
-            </div>
-          </div>
-          <div class="grid-items__item">
-            <img
-              class="grid-items__img"
-              src="images/Elbrus.jpg"
-              alt="Гора Эльбрус"
-            />
-            <div class="grid-items__subtitle">
-              <p class="grid-items__place-name">Гора Эльбрус</p>
-              <img
-                class="grid-items__heart"
-                src="images/Heart.svg"
-                alt="Лайк"
-              />
-            </div>
-          </div>
-          <div class="grid-items__item">
-            <img class="grid-items__img" src="images/Dombay.jpg" alt="Домбай" />
-            <div class="grid-items__subtitle">
-              <p class="grid-items__place-name">Домбай</p>
-              <img
-                class="grid-items__heart"
-                src="images/Heart.svg"
-                alt="Лайк"
-              />
-            </div>
-          </div>
-          <div class="grid-items__item">
-            <img
-              class="grid-items__img"
-              src="images/Karachaevsk.jpg"
-              alt="Карачаево-Черкесия"
-            />
-            <div class="grid-items__subtitle">
-              <p class="grid-items__place-name">Карачаево-Черкесия</p>
-              <div class="grid-items__heart"></div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <footer class="footer">
-        <p class="footer__text">&copy; 2020 Mesto Russia</p>
-      </footer>
-      <div class="popup">
-        <div class="popup__container">
-          <p class="popup__heading">Редактировать профиль</p>
-          <form>
-            <fieldset class="popup__fieldset">
-              <input
-                class="popup__name"
-                type="text"
-                name="name"
-                id="name"
-                value="Жак-Ив Кусто"
-              />
-            </fieldset>
-            <div class="popup__line"></div>
-            <fieldset class="popup__fieldset">
-              <input
-                class="popup__position"
-                type="text"
-                name="position"
-                id="position"
-                value="Исследователь океана"
-              />
-            </fieldset>
-            <div class="popup__line"></div>
-            <input class="popup__button" type="button" value="Сохранить" />
-          </form>
+  <body class="page">
+    <header class="page__header header">
+      <img
+        class="header__logo"
+        src="images/Logo-Mesto-Russia.svg"
+        alt="Логотип Место"
+      />
+    </header>
+    <main>
+      <section class="page__profile profile">
+        <div class="profile__wrap">
           <img
-            class="popup__close-button"
-            src="images/Close-Icon.png"
-            alt="Кнопка закрыть"
+            class="profile__picture"
+            src="images/Picture-Jak.jpg"
+            alt="Фото Жак-Ив Кусто"
           />
+          <div class="profile__info">
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+            <button
+              type="submit"
+              class="profile__edit-button"
+              name="edit"
+              value="Редактировать"
+            ></button>
+            <h2 class="profile__description">Исследователь океана</h2>
+          </div>
         </div>
+        <button
+          type="submit"
+          class="profile__plus-container"
+          name="load"
+          value="Загрузить"
+        >
+          <img
+            class="profile__plus"
+            src="images/Plus.png"
+            alt="Кнопка добавить картинку"
+          />
+        </button>
+      </section>
+      <section class="page__grid-items grid-items">
+        <div class="grid-items__item">
+          <img
+            class="grid-items__img"
+            src="images/Karachaevsk.jpg"
+            alt="Карачаевск"
+          />
+          <div class="grid-items__subtitle">
+            <h3 class="grid-items__place-name">Карачаевск</h3>
+            <button
+              type="submit"
+              class="grid-items__heart"
+              name="like"
+              value="Лайк"
+            ></button>
+          </div>
+        </div>
+        <div class="grid-items__item">
+          <img
+            class="grid-items__img"
+            src="images/Elbrus.jpg"
+            alt="Гора Эльбрус"
+          />
+          <div class="grid-items__subtitle">
+            <h3 class="grid-items__place-name">Гора Эльбрус</h3>
+            <button
+              type="submit"
+              class="grid-items__heart"
+              name="like"
+              value="Лайк"
+            ></button>
+          </div>
+        </div>
+        <div class="grid-items__item">
+          <img class="grid-items__img" src="images/Dombay.jpg" alt="Домбай" />
+          <div class="grid-items__subtitle">
+            <h3 class="grid-items__place-name">Домбай</h3>
+            <button
+              type="submit"
+              class="grid-items__heart"
+              name="like"
+              value="Лайк"
+            ></button>
+          </div>
+        </div>
+        <div class="grid-items__item">
+          <img
+            class="grid-items__img"
+            src="images/Elbrus.jpg"
+            alt="Гора Эльбрус"
+          />
+          <div class="grid-items__subtitle">
+            <h3 class="grid-items__place-name">Гора Эльбрус</h3>
+            <button
+              type="submit"
+              class="grid-items__heart"
+              name="like"
+              value="Лайк"
+            ></button>
+          </div>
+        </div>
+        <div class="grid-items__item">
+          <img class="grid-items__img" src="images/Dombay.jpg" alt="Домбай" />
+          <div class="grid-items__subtitle">
+            <h3 class="grid-items__place-name">Домбай</h3>
+            <button
+              type="submit"
+              class="grid-items__heart"
+              name="like"
+              value="Лайк"
+            ></button>
+          </div>
+        </div>
+        <div class="grid-items__item">
+          <img
+            class="grid-items__img"
+            src="images/Karachaevsk.jpg"
+            alt="Карачаево-Черкесия"
+          />
+          <div class="grid-items__subtitle">
+            <h3 class="grid-items__place-name">Карачаево-Черкесия</h3>
+            <button
+              type="submit"
+              class="grid-items__heart"
+              name="like"
+              value="Лайк"
+            ></button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">&copy; 2020 Mesto Russia</p>
+    </footer>
+    <div class="popup">
+      <div class="popup__container">
+        <h4 class="popup__heading">Редактировать профиль</h4>
+        <form name="profile-form">
+          <input
+            class="popup__input popup__input_type_name"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Введите имя"
+          />
+          <input
+            class="popup__input popup__input_type_position"
+            type="text"
+            name="position"
+            id="position"
+            placeholder="Введите должность"
+          />
+          <button
+            class="popup__button"
+            type="submit"
+            name="save"
+            value="Сохранить"
+          >
+            Сохранить
+          </button>
+        </form>
+        <button
+          class="popup__close-button"
+          type="submit"
+          name="close-button"
+          value="Закрыть"
+        ></button>
       </div>
     </div>
   </body>

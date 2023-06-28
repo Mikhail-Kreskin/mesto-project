@@ -6,13 +6,6 @@
   flex-wrap: wrap;
 }
 
-@media (min-width: 321px) and (max-width: 720px) {
-  .profile {
-    justify-content: center;
-    flex-direction: column;
-  }
-}
-
 @media (max-width: 320px) {
   .profile {
     min-width: 282px;
@@ -22,6 +15,8 @@
 
 @media (min-width: 321px) and (max-width: 963px) {
   .profile {
+    justify-content: center;
+    flex-direction: column;
     padding-left: 20px;
     padding-right: 20px;
   }

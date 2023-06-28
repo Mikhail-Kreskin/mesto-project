@@ -2,7 +2,7 @@
   margin: 51px auto 67px auto;
 }
 
-@media (min-width: 320px) {
+@media (max-width: 320px) {
   .page__grid-items {
     margin: 36px auto 48px auto;
     padding-left: 0px;
