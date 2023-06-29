@@ -4,20 +4,24 @@
   font-family: "Inter", Arial, sans-serif;
   font-weight: 500;
   line-height: 48px;
+  font-style: normal;
   margin-top: 0;
   margin-bottom: 0;
-  width: 294px;
+  max-width: 294px;
+  width: 100%;
   box-sizing: content-box;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding: 0;
+  float: left;
 }
 
 @media (min-width: 320px) and (max-width: 525px) {
   .profile__name {
     line-height: normal;
     font-size: 27px;
-    width: 189px;
+    max-width: 189px;
     margin-left: 46px;
     margin-right: 10px;
     line-height: 28px;

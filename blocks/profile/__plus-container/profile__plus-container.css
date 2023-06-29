@@ -4,12 +4,13 @@
   border-radius: 2px;
   border: 2px solid #fff;
   justify-self: end;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
   box-sizing: border-box;
   background-color: transparent;
+  background-image: url("../../../images/Plus.png");
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  background-position: center center;
 }
 
 .profile__plus-container:hover {
@@ -21,6 +22,7 @@
     width: 282px;
     height: 50px;
     margin-top: 32px;
+    background-size: 16px 16px;
   }
 }
 

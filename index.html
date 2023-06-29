@@ -29,26 +29,20 @@
           <div class="profile__info">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
             <button
-              type="submit"
+              type="button"
               class="profile__edit-button"
               name="edit"
               value="Редактировать"
             ></button>
-            <h2 class="profile__description">Исследователь океана</h2>
+            <p class="profile__description">Исследователь океана</p>
           </div>
         </div>
         <button
-          type="submit"
+          type="button"
           class="profile__plus-container"
           name="load"
           value="Загрузить"
-        >
-          <img
-            class="profile__plus"
-            src="images/Plus.png"
-            alt="Кнопка добавить картинку"
-          />
-        </button>
+        ></button>
       </section>
       <section class="page__grid-items grid-items">
         <div class="grid-items__item">
@@ -57,14 +51,16 @@
             src="images/Karachaevsk.jpg"
             alt="Карачаевск"
           />
-          <div class="grid-items__subtitle">
-            <h3 class="grid-items__place-name">Карачаевск</h3>
-            <button
-              type="submit"
-              class="grid-items__heart"
-              name="like"
-              value="Лайк"
-            ></button>
+          <div class="grid-items__subtitle-box">
+            <div class="grid-items__subtitle">
+              <h2 class="grid-items__place-name">Карачаевск</h2>
+              <button
+                type="button"
+                class="grid-items__heart"
+                name="like"
+                value="Лайк"
+              ></button>
+            </div>
           </div>
         </div>
         <div class="grid-items__item">
@@ -73,26 +69,30 @@
             src="images/Elbrus.jpg"
             alt="Гора Эльбрус"
           />
-          <div class="grid-items__subtitle">
-            <h3 class="grid-items__place-name">Гора Эльбрус</h3>
-            <button
-              type="submit"
-              class="grid-items__heart"
-              name="like"
-              value="Лайк"
-            ></button>
+          <div class="grid-items__subtitle-box">
+            <div class="grid-items__subtitle">
+              <h2 class="grid-items__place-name">Гора Эльбрус</h2>
+              <button
+                type="button"
+                class="grid-items__heart"
+                name="like"
+                value="Лайк"
+              ></button>
+            </div>
           </div>
         </div>
         <div class="grid-items__item">
           <img class="grid-items__img" src="images/Dombay.jpg" alt="Домбай" />
-          <div class="grid-items__subtitle">
-            <h3 class="grid-items__place-name">Домбай</h3>
-            <button
-              type="submit"
-              class="grid-items__heart"
-              name="like"
-              value="Лайк"
-            ></button>
+          <div class="grid-items__subtitle-box">
+            <div class="grid-items__subtitle">
+              <h2 class="grid-items__place-name">Домбай</h2>
+              <button
+                type="button"
+                class="grid-items__heart"
+                name="like"
+                value="Лайк"
+              ></button>
+            </div>
           </div>
         </div>
         <div class="grid-items__item">
@@ -101,26 +101,30 @@
             src="images/Elbrus.jpg"
             alt="Гора Эльбрус"
           />
-          <div class="grid-items__subtitle">
-            <h3 class="grid-items__place-name">Гора Эльбрус</h3>
-            <button
-              type="submit"
-              class="grid-items__heart"
-              name="like"
-              value="Лайк"
-            ></button>
+          <div class="grid-items__subtitle-box">
+            <div class="grid-items__subtitle">
+              <h2 class="grid-items__place-name">Гора Эльбрус</h2>
+              <button
+                type="button"
+                class="grid-items__heart"
+                name="like"
+                value="Лайк"
+              ></button>
+            </div>
           </div>
         </div>
         <div class="grid-items__item">
           <img class="grid-items__img" src="images/Dombay.jpg" alt="Домбай" />
-          <div class="grid-items__subtitle">
-            <h3 class="grid-items__place-name">Домбай</h3>
-            <button
-              type="submit"
-              class="grid-items__heart"
-              name="like"
-              value="Лайк"
-            ></button>
+          <div class="grid-items__subtitle-box">
+            <div class="grid-items__subtitle">
+              <h2 class="grid-items__place-name">Домбай</h2>
+              <button
+                type="button"
+                class="grid-items__heart"
+                name="like"
+                value="Лайк"
+              ></button>
+            </div>
           </div>
         </div>
         <div class="grid-items__item">
@@ -129,14 +133,16 @@
             src="images/Karachaevsk.jpg"
             alt="Карачаево-Черкесия"
           />
-          <div class="grid-items__subtitle">
-            <h3 class="grid-items__place-name">Карачаево-Черкесия</h3>
-            <button
-              type="submit"
-              class="grid-items__heart"
-              name="like"
-              value="Лайк"
-            ></button>
+          <div class="grid-items__subtitle-box">
+            <div class="grid-items__subtitle">
+              <h2 class="grid-items__place-name">Карачаево-Черкесия</h2>
+              <button
+                type="button"
+                class="grid-items__heart"
+                name="like"
+                value="Лайк"
+              ></button>
+            </div>
           </div>
         </div>
       </section>
@@ -146,7 +152,7 @@
     </footer>
     <div class="popup">
       <div class="popup__container">
-        <h4 class="popup__heading">Редактировать профиль</h4>
+        <h3 class="popup__heading">Редактировать профиль</h3>
         <form name="profile-form">
           <input
             class="popup__input popup__input_type_name"
@@ -173,7 +179,7 @@
         </form>
         <button
           class="popup__close-button"
-          type="submit"
+          type="button"
           name="close-button"
           value="Закрыть"
         ></button>

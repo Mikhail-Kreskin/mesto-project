@@ -1,13 +1,7 @@
 .grid-items__item {
   border-radius: 10px;
   background-color: #fff;
-  height: 361px;
   box-sizing: border-box;
-}
-
-@media (min-width: 397px) and (max-width: 650px) {
-  .grid-items__item {
-    height: fit-content;
-
-  }
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
 }
