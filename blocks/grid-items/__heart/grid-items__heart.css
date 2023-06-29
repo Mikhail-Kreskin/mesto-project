@@ -9,6 +9,7 @@
   background-size: cover;
   background-color: transparent;
   border: none;
+  padding: 0;
 }
 
 .grid-items__heart:hover {
