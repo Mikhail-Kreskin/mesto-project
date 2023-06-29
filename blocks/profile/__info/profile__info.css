@@ -20,3 +20,9 @@
     margin-top: 26px;
   }
 }
+
+@media (min-width: 442px) and (max-width: 525px) {
+  .profile__info {
+    margin-top: 0;
+  }
+}
