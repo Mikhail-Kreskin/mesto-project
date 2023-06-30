@@ -19,17 +19,30 @@
 
 @media (max-width: 320px) {
   .profile__plus-container {
-    width: 282px;
+    max-width: 282px;
+    width: 100%;
     height: 50px;
-    margin-top: 32px;
     background-size: 16px 16px;
   }
 }
 
-@media (min-width: 321px) and (max-width: 963px) {
+@media (min-width: 320px) and (max-width: 700px) {
   .profile__plus-container {
-    margin-top: 18px;
+    margin-top: 32px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 700px) {
+  .profile__plus-container {
     width: 100%;
-    max-width: 486px;
+    max-width: 580px;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 963px) {
+  .profile__plus-container {
+    width: 100%;
+    max-width: 650px;
+    margin-top: 18px;
   }
 }

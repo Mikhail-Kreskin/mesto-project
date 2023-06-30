@@ -7,8 +7,6 @@
   font-style: normal;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 294px;
-  width: 100%;
   box-sizing: content-box;
   white-space: nowrap;
   overflow: hidden;
@@ -17,13 +15,33 @@
   float: left;
 }
 
-@media (min-width: 320px) and (max-width: 525px) {
+@media (max-width: 320px) {
+  .profile__name {
+    max-width: 210px;
+  }
+}
+@media (min-width: 320px) and (max-width: 700px) {
   .profile__name {
     line-height: normal;
+    margin-left: 40px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 450px) {
+  .profile__name {
     font-size: 27px;
-    max-width: 189px;
-    margin-left: 46px;
-    margin-right: 10px;
-    line-height: 28px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 450px) {
+  .profile__name {
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 451px) and (max-width: 700px) {
+  .profile__name {
+    font-size: 30px;
+    margin-right: 0px;
   }
 }
