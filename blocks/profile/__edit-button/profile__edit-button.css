@@ -18,10 +18,18 @@
   opacity: 0.6;
 }
 
-@media (min-width: 320px) and (max-width: 700px) {
+@media (max-width: 320px) {
   .profile__edit-button {
     margin-bottom: 6px;
     width: 18px;
     height: 18px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 700px) {
+  .profile__edit-button {
+    margin-bottom: 12px;
+    width: 20px;
+    height: 20px;
   }
 }

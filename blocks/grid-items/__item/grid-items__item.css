@@ -3,5 +3,6 @@
   background-color: #fff;
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: repeat(2, min-content);
+  grid-template-rows: min-content 79px;
+  border: 0;
 }
