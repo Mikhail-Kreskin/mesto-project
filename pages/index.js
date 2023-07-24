@@ -5,7 +5,7 @@ const popup_opened_namesChanges = document.querySelector('.page__names-changes')
 const popup_opened_picturesChanges = document.querySelector('.page__picture-changes');
 const popupCloseName_button = document.querySelector('.popup__close-button');
 const popupClosePicture_button = document.getElementById('popup__close-button');
-let gridsContainer = document.querySelector('.page__grid-items');
+var gridsContainer = document.querySelector('.page__grid-items');
 const profileNameInput = document.getElementById('popup__name');
 const profilePositionInput = document.getElementById('popup__position');
 const pictureNameInput = document.getElementById('name__place');
@@ -13,7 +13,7 @@ const pictureLinkInput = document.getElementById('picture__link');
 
 /* Первоначальная загрузка массива карточек */
 
-  let initialCardsList = [
+  const initialCardsList = [
     {
       placeName: "Dream job",
       link: "https://images.unsplash.com/photo-1625924033080-1e699217e433?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGlubm9wb2xpc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
