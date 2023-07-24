@@ -13,7 +13,6 @@ const pictureLinkInput = document.getElementById('picture__link');
 
 /* Первоначальная загрузка массива карточек */
 
-window.onload = function () {
   let initialCardsList = [
     {
       placeName: "Dream job",
@@ -75,8 +74,6 @@ window.onload = function () {
       event.target.closest('.grid-items__item').remove();
     });
   });
-
-};
 
 /* Открытие и закрытие попапа для редактирования имени и позиции */
 editNames_button.addEventListener('click', function () {
