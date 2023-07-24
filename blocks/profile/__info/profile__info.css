@@ -17,5 +17,6 @@
     row-gap: 14px;
     column-gap: 10px;
     margin-left: 0;
+    justify-content: center;
   }
 }

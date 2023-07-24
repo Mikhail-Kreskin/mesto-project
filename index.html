@@ -44,149 +44,24 @@
           value="Загрузить"
         ></button>
       </section>
-      <section class="page__grid-items grid-items">
-        <div class="grid-items__item">
-          <img
-            class="grid-items__img"
-            src="images/Karachaevsk.jpg"
-            alt="Карачаевск"
-          />
-          <div class="grid-items__subtitle">
-            <h2 class="grid-items__place-name">Карачаевск</h2>
-            <button
-              type="button"
-              class="grid-items__heart"
-              name="like"
-              value="Лайк"
-            ></button>
-            <button
-              type="button"
-              class="grid-items__trash"
-              name="like"
-              value="Корзина"
-            ></button>
-          </div>
-        </div>
-        <div class="grid-items__item">
-          <img
-            class="grid-items__img"
-            src="images/Elbrus.jpg"
-            alt="Гора Эльбрус"
-          />
-          <div class="grid-items__subtitle">
-            <h2 class="grid-items__place-name">Гора Эльбрус</h2>
-            <button
-              type="button"
-              class="grid-items__heart"
-              name="like"
-              value="Лайк"
-            ></button>
-            <button
-              type="button"
-              class="grid-items__trash"
-              name="like"
-              value="Корзина"
-            ></button>
-          </div>
-        </div>
-        <div class="grid-items__item">
-          <img class="grid-items__img" src="images/Dombay.jpg" alt="Домбай" />
-          <div class="grid-items__subtitle">
-            <h2 class="grid-items__place-name">Домбай</h2>
-            <button
-              type="button"
-              class="grid-items__heart"
-              name="like"
-              value="Лайк"
-            ></button>
-            <button
-              type="button"
-              class="grid-items__trash"
-              name="like"
-              value="Корзина"
-            ></button>
-          </div>
-        </div>
-        <div class="grid-items__item">
-          <img
-            class="grid-items__img"
-            src="images/Elbrus.jpg"
-            alt="Гора Эльбрус"
-          />
-          <div class="grid-items__subtitle">
-            <h2 class="grid-items__place-name">Гора Эльбрус</h2>
-            <button
-              type="button"
-              class="grid-items__heart"
-              name="like"
-              value="Лайк"
-            ></button>
-            <button
-              type="button"
-              class="grid-items__trash"
-              name="like"
-              value="Корзина"
-            ></button>
-          </div>
-        </div>
-        <div class="grid-items__item">
-          <img class="grid-items__img" src="images/Dombay.jpg" alt="Домбай" />
-          <div class="grid-items__subtitle">
-            <h2 class="grid-items__place-name">Домбай</h2>
-            <button
-              type="button"
-              class="grid-items__heart"
-              name="like"
-              value="Лайк"
-            ></button>
-            <button
-              type="button"
-              class="grid-items__trash"
-              name="like"
-              value="Корзина"
-            ></button>
-          </div>
-        </div>
-        <div class="grid-items__item">
-          <img
-            class="grid-items__img"
-            src="images/Karachaevsk.jpg"
-            alt="Карачаево-Черкесия"
-          />
-          <div class="grid-items__subtitle">
-            <h2 class="grid-items__place-name">Карачаево-Черкесия</h2>
-            <button
-              type="button"
-              class="grid-items__heart"
-              name="like"
-              value="Лайк"
-            ></button>
-            <button
-              type="button"
-              class="grid-items__trash"
-              name="like"
-              value="Корзина"
-            ></button>
-          </div>
-        </div>
-      </section>
+      <section class="page__grid-items grid-items"></section>
     </main>
     <footer class="footer">
       <p class="footer__text">&copy; 2020 Mesto Russia</p>
     </footer>
     <div class="popup page__names-changes">
-      <div class="popup__container">
+      <div class="popup__container page__names-container">
         <h3 class="popup__heading">Редактировать профиль</h3>
         <form name="profile-form">
           <input
-            class="popup__input popup__input_type_name"
+            class="popup__input"
             type="text"
             name="name"
             id="popup__name"
             placeholder="Введите имя"
           />
           <input
-            class="popup__input popup__input_type_position"
+            class="popup__input"
             type="text"
             name="position"
             id="popup__position"
@@ -215,22 +90,23 @@
         <h3 class="popup__heading">Новое место</h3>
         <form name="profile-form">
           <input
-            class="popup__input popup__input_type_name"
+            class="popup__input"
             type="text"
             name="name_place"
-            id="name_place"
+            id="name__place"
             placeholder="Название"
           />
           <input
-            class="popup__input popup__input_type_position"
+            class="popup__input"
             type="text"
             name="picture_link"
-            id="picture_link"
+            id="picture__link"
             placeholder="Ссылка на картинку"
           />
           <button
             class="popup__button"
-            type="submit"
+            id="popup__createButton"
+            type="button"
             name="create"
             value="Создать"
           >
@@ -246,6 +122,38 @@
         ></button>
       </div>
     </div>
+    <template class="grid__template">
+      <div class="grid-items__item">
+        <img class="grid-items__img" />
+        <div class="grid-items__subtitle">
+          <h2 class="grid-items__place-name"></h2>
+          <button
+            type="button"
+            class="grid-items__heart"
+            name="like"
+            value="Лайк"
+          ></button>
+          <button
+            type="button"
+            class="grid-items__trash"
+            name="Trash"
+            value="Корзина"
+          ></button>
+        </div>
+        <div class="grid-items__popup-container popup">
+          <div class="grid-items__popup">
+            <img class="grid-items__popup-img" src="" alt="" />
+            <div class="grid-items__popup-title"></div>
+            <button
+              class="grid-items__close-button popup__close-button"
+              type="button"
+              name="close-button"
+              value="Закрыть"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </template>
     <script src="pages/index.js"></script>
   </body>
 </html>

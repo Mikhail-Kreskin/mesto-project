@@ -16,8 +16,3 @@
 .grid-items__heart:hover {
   opacity: 0.5;
 }
-
-.grid-items__heart:active {
-  background-image: url(../../../images/Black-Heart.svg);
-  opacity: 1;
-}
