@@ -29,12 +29,19 @@ function closePopups(close_button) {
 };
 
 /* Переменные темплейта вынесены в отдельную функцию */
-let cardsSources = [];
+
 function createCards(source) {
   const gridTemplate = source.content;
   const gridItem = gridTemplate.querySelector('.grid-items__item').cloneNode(true);
   const gridPopupContainer = gridItem.querySelector('.grid-items__popup-container');
-  return cardsSources = [gridItem, gridPopupContainer];
+  return [gridItem, gridPopupContainer];
+};
+
+/* Очистка текста в попапах */
+
+function popupTextClean(clean, Clean) {
+  clean.value = "";
+  Clean.value = "";
 };
 
 /* Первоначальная загрузка массива карточек */
@@ -74,25 +81,25 @@ const initialCardsList = [
 
 var gridsContainer = document.querySelector('.page__grid-items');
 initialCardsList.forEach(function (item) {
-  createCards(document.querySelector('.grid__template'));
-  cardsSources[0].querySelector('.grid-items__place-name').textContent = item.placeName;
-  cardsSources[0].querySelector('.grid-items__img').src = item.link;
-  cardsSources[0].querySelector('.grid-items__img').alt = item.pictureName;
-  const gridImage = cardsSources[0].querySelector('.grid-items__img');
+  let wayItems = createCards(document.querySelector('.grid__template'));
+  wayItems[0].querySelector('.grid-items__place-name').textContent = item.placeName;
+  wayItems[0].querySelector('.grid-items__img').src = item.link;
+  wayItems[0].querySelector('.grid-items__img').alt = item.pictureName;
+  const gridImage = wayItems[0].querySelector('.grid-items__img');
   gridImage.addEventListener('click', function () {
-    openPopups(cardsSources[1]);
-    cardsSources[0].querySelector('.grid-items__popup-title').textContent = item.placeName;
-    cardsSources[0].querySelector('.grid-items__popup-img').src = gridImage.src;
-    cardsSources[0].querySelector('.grid-items__popup-img').alt = gridImage.alt;
+    openPopups(wayItems[1]);
+    wayItems[0].querySelector('.grid-items__popup-title').textContent = wayItems[0].querySelector('.grid-items__place-name').textContent;
+    wayItems[0].querySelector('.grid-items__popup-img').src = gridImage.src;
+    wayItems[0].querySelector('.grid-items__popup-img').alt = gridImage.alt;
   });
-  cardsSources[0].querySelector('.grid-items__close-button').addEventListener('click', function () {
-    closePopups(cardsSources[1]);
+  wayItems[0].querySelector('.grid-items__close-button').addEventListener('click', function () {
+    closePopups(wayItems[1]);
   });
-  gridsContainer.append(cardsSources[0]);
+  gridsContainer.append(wayItems[0]);
 
-  clickCardsLike(cardsSources[0].querySelector('.grid-items__heart'));
+  clickCardsLike(wayItems[0].querySelector('.grid-items__heart'));
 
-  cardsDelete(cardsSources[0].querySelector('.grid-items__trash'));
+  cardsDelete(wayItems[0].querySelector('.grid-items__trash'));
 
 });
 
@@ -105,8 +112,7 @@ const profilePositionInput = document.getElementById('popup__position');
 
 editNames_button.addEventListener('click', function () {
   openPopups(popup_opened_namesChanges);
-  profileNameInput.value = "";
-  profilePositionInput.value = "";
+  popupTextClean(profileNameInput, profilePositionInput);
 });
 popupCloseName_button.addEventListener('click', function () {
   closePopups(popup_opened_namesChanges);
@@ -116,13 +122,12 @@ popupCloseName_button.addEventListener('click', function () {
 
 const editPictures_button = document.querySelector('.profile__plus-container');
 const popup_opened_picturesChanges = document.querySelector('.page__picture-changes');
-const pictureNameInput = document.getElementById('name__place');
+let pictureNameInput = document.getElementById('name__place');
 const pictureLinkInput = document.getElementById('picture__link');
 const popupClosePicture_button = document.getElementById('popup__close-button');
 editPictures_button.addEventListener('click', function () {
   openPopups(popup_opened_picturesChanges);
-  pictureNameInput.value = "";
-  pictureLinkInput.value = "";
+  popupTextClean(pictureNameInput, pictureLinkInput);
 });
 
 popupClosePicture_button.addEventListener('click', function () {
@@ -155,22 +160,22 @@ popupCreateButton.addEventListener('click', function () {
     alert("Необходимо ввести название места и ссылку на изображение")
   }
   else {
-    createCards(document.querySelector('.grid__template'));
-    cardsSources[0].querySelector('.grid-items__place-name').textContent = pictureNameInput.value;
-    const gridImage = cardsSources[0].querySelector('.grid-items__img');
+    let itemsWay = createCards(document.querySelector('.grid__template'));
+    itemsWay[0].querySelector('.grid-items__place-name').textContent = pictureNameInput.value;
+    const gridImage = itemsWay[0].querySelector('.grid-items__img');
     gridImage.src = pictureLinkInput.value;
     gridImage.alt = pictureNameInput.value;
-    gridsContainer.prepend(cardsSources[0]);
-    clickCardsLike(cardsSources[0].querySelector('.grid-items__heart'));
-    cardsDelete(cardsSources[0].querySelector('.grid-items__trash'));
+    gridsContainer.prepend(itemsWay[0]);
+    clickCardsLike(itemsWay[0].querySelector('.grid-items__heart'));
+    cardsDelete(itemsWay[0].querySelector('.grid-items__trash'));
     gridImage.addEventListener('click', function () {
-      openPopups(cardsSources[1]);
-      cardsSources[0].querySelector('.grid-items__popup-title').textContent = cardsSources[0].querySelector('.grid-items__place-name').textContent;
-      cardsSources[0].querySelector('.grid-items__popup-img').src = gridImage.src;
-      cardsSources[0].querySelector('.grid-items__popup-img').alt = gridImage.alt;
+      openPopups(itemsWay[1]);
+      itemsWay[0].querySelector('.grid-items__popup-title').textContent = itemsWay[0].querySelector('.grid-items__place-name').textContent;
+      itemsWay[0].querySelector('.grid-items__popup-img').src = gridImage.src;
+      itemsWay[0].querySelector('.grid-items__popup-img').alt = gridImage.alt;
     });
-    cardsSources[0].querySelector('.grid-items__close-button').addEventListener('click', function () {
-      closePopups(cardsSources[1]);
+    itemsWay[0].querySelector('.grid-items__close-button').addEventListener('click', function () {
+      closePopups(itemsWay[1]);
     });
     closePopups(popup_opened_picturesChanges);
   }
