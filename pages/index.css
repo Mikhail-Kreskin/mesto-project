@@ -22,9 +22,9 @@
 @import url("../blocks/grid-items/__place-name/grid-items__place-name.css");
 @import url("../blocks/grid-items/__heart/grid-items__heart.css");
 @import url("../blocks/grid-items/__heart/_type/grid-items__heart_type_active.css");
-@import url("../blocks/grid-items/__popup-title/grid-items__popup-title.css");
-@import url("../blocks/grid-items/__popup-img/grid-items__popup-img.css");
-@import url("../blocks/grid-items/__popup/grid-items__popup.css");
+@import url("../blocks/popup/__title/popup__title.css");
+@import url("../blocks/popup/__grid-items/popup__grid-items.css");
+@import url("../blocks/popup/__img/popup__img.css");
 @import url("../blocks/footer/footer.css");
 @import url("../blocks/footer/__text/footer__text.css");
 @import url("../blocks/popup/popup.css");

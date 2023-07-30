@@ -52,7 +52,7 @@
     <div class="popup page__names-changes">
       <div class="popup__container page__names-container">
         <h3 class="popup__heading">Редактировать профиль</h3>
-        <form name="profile-form">
+        <form name="profile-form" id="popup__profile-form">
           <input
             class="popup__input"
             type="text"
@@ -69,7 +69,7 @@
           />
           <button
             class="popup__button"
-            type="button"
+            type="submit"
             id="popup__saveButton"
             name="save"
             value="Сохранить"
@@ -88,7 +88,7 @@
     <div class="popup page__picture-changes">
       <div class="popup__container">
         <h3 class="popup__heading">Новое место</h3>
-        <form name="profile-form">
+        <form name="profile-form" id="popup__picture-profile-form">
           <input
             class="popup__input"
             type="text"
@@ -106,7 +106,7 @@
           <button
             class="popup__button"
             id="popup__createButton"
-            type="button"
+            type="submit"
             name="create"
             value="Создать"
           >
@@ -116,6 +116,18 @@
         <button
           class="popup__close-button"
           id="popup__close-button"
+          type="button"
+          name="close-button"
+          value="Закрыть"
+        ></button>
+      </div>
+    </div>
+    <div class="popup popup_zoom-image">
+      <div class="popup__grid-items">
+        <img class="popup__img" src="" alt="" />
+        <div class="popup__title"></div>
+        <button
+          class="popup__close-button popup-button_type_close"
           type="button"
           name="close-button"
           value="Закрыть"
@@ -140,20 +152,9 @@
             value="Корзина"
           ></button>
         </div>
-        <div class="grid-items__popup-container popup">
-          <div class="grid-items__popup">
-            <img class="grid-items__popup-img" src="" alt="" />
-            <div class="grid-items__popup-title"></div>
-            <button
-              class="grid-items__close-button popup__close-button"
-              type="button"
-              name="close-button"
-              value="Закрыть"
-            ></button>
-          </div>
-        </div>
       </div>
     </template>
+    <script src="pages/constants.js"></script>
     <script src="pages/index.js"></script>
   </body>
 </html>
