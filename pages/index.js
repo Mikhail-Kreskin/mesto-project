@@ -18,6 +18,7 @@ const popupPictureLinkInput = document.getElementById('picture__link');
 const buttonClosePopupEditPicture = document.getElementById('popup__close-button');
 const crossButtonClosePopupImg = document.querySelector('.popup-button_type_close');
 const popupButtonCreateNewCard = document.getElementById('popup__createButton');
+const popupImgTitle = document.querySelector('.popup__title');
 
 /*Блок создания функций*/
 /* Лайки для карточек выведены в отдельную функцию */
@@ -38,32 +39,33 @@ function deleteCard(trash) {
 
 /* Функция открытия попапов */
 
-function openPopup(open_button) {
-  open_button.classList.add("popup_opened");
+function openPopup(popup) {
+  popup.classList.add("popup_opened");
 };
 
 /* Функция закрытия попапов */
 
-function closePopup(close_button) {
-  close_button.classList.remove("popup_opened");
+function closePopup(popup) {
+  popup.classList.remove("popup_opened");
 };
 
 /* Функция создания карточки */
 
 function createCard(name, link, pictureName) {
   const card = cardTemplate.querySelector('.grid-items__item').cloneNode(true);
+  const cardImg = card.querySelector('.grid-items__img');
   card.querySelector('.grid-items__place-name').textContent = name;
-  card.querySelector('.grid-items__img').src = link;
-  card.querySelector('.grid-items__img').alt = pictureName;
+  cardImg.src = link;
+  cardImg.alt = pictureName;
 
   clickOnLikeCard(card.querySelector('.grid-items__heart'));
   deleteCard(card.querySelector('.grid-items__trash'));
 
-  card.querySelector('.grid-items__img').addEventListener('click', function () {
+  cardImg.addEventListener('click', function () {
     openPopup(popupZoomImgContainer);
-    document.querySelector('.popup__title').textContent = card.querySelector('.grid-items__place-name').textContent;
-    popupImg.src = card.querySelector('.grid-items__img').src
-    popupImg.alt = card.querySelector('.grid-items__img').alt;
+    popupImgTitle.textContent = name;
+    popupImg.src = link;
+    popupImg.alt = pictureName;
   });
   return card;
 }
@@ -102,7 +104,7 @@ buttonClosePopupEditName.addEventListener('click', function () {
 
 buttonOpenPopupAddPicture.addEventListener('click', function () {
   openPopup(popupAddPicture);
-  document.getElementById('popup__picture-profile-form').reset();
+  formAddCard.reset();
 });
 
 buttonClosePopupEditPicture.addEventListener('click', function () {
@@ -111,9 +113,9 @@ buttonClosePopupEditPicture.addEventListener('click', function () {
 
 /*Замена имени и позиции на текст из попапа*/
 
-const popupSaveForm = document.getElementById('popup__profile-form');
+const formEditProfile = document.getElementById('popup__profile-form');
 
-popupSaveForm.addEventListener('submit', function (e) {
+formEditProfile.addEventListener('submit', function (e) {
   if (popupProfileNameInput.value === '' || popupProfilePositionInput.value === '') {
     alert("Необходимо ввести имя и должность");
     e.preventDefault();
@@ -128,9 +130,9 @@ popupSaveForm.addEventListener('submit', function (e) {
 
 /* Добавление и удаление карточки */
 
-const popupCreateCardForm = document.getElementById('popup__picture-profile-form');
+const formAddCard = document.getElementById('popup__picture-profile-form');
 
-popupCreateCardForm.addEventListener('submit', function (e) {
+formAddCard.addEventListener('submit', function (e) {
   if (popupPictureNameInput.value === '' || popupPictureLinkInput.value === '') {
     alert("Необходимо ввести название места и ссылку на изображение");
     openPopup(popupAddPicture);
